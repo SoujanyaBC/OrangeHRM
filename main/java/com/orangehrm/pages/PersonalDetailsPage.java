@@ -1,17 +1,14 @@
 package com.orangehrm.pages;
-
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
 import com.orangehrm.base.TestBase;
 
 public class PersonalDetailsPage extends TestBase {
@@ -27,15 +24,15 @@ public class PersonalDetailsPage extends TestBase {
         	 
     	 try { 
         	 
-         WebElement myInfo=driver.findElement(By.xpath(prop.getProperty("my_info")));
-		 myInfo.click();
+            WebElement myInfo=driver.findElement(By.xpath(prop.getProperty("my_info")));
+	    myInfo.click();
     
-		 WebElement profilePicture = driver.findElement(By.xpath(prop.getProperty("profile_picture")));
-		 profilePicture.click();
+	     WebElement profilePicture = driver.findElement(By.xpath(prop.getProperty("profile_picture")));
+	     profilePicture.click();
      
-		 WebElement changeOfProfilePicture = driver.findElement(By.xpath(prop.getProperty("change_of_profile_picture")));
-		 changeOfProfilePicture.click();
-		 Robot rob = new Robot();
+	     WebElement changeOfProfilePicture = driver.findElement(By.xpath(prop.getProperty("change_of_profile_picture")));
+	     changeOfProfilePicture.click();
+	     Robot rob = new Robot();
 	     rob.delay(2000);
 	     StringSelection sss= new StringSelection(prop.getProperty("picture_1"));
 	     Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sss,null);
@@ -48,12 +45,12 @@ public class PersonalDetailsPage extends TestBase {
 	     Thread.sleep(2000);
 	     
 	     Actions act = new Actions(driver);
-		 act.scrollByAmount(0,300).perform();
-         WebElement savebutton=driver.findElement(By.xpath(prop.getProperty("click_on_first_save_button")));
-		 savebutton.click();
+	     act.scrollByAmount(0,300).perform();
+             WebElement savebutton=driver.findElement(By.xpath(prop.getProperty("click_on_first_save_button")));
+	     savebutton.click();
 	     Thread.sleep(2000);
 	     
-	     driver.navigate().back(); 
+	         driver.navigate().back(); 
 		 Thread.sleep(3000);
 		 WebElement firstName = driver.findElement(By.xpath(prop.getProperty("first_name")));
 		 Thread.sleep(2000);
@@ -114,10 +111,10 @@ public class PersonalDetailsPage extends TestBase {
 		  robot.keyPress(KeyEvent.VK_DELETE);
 		  robot.keyRelease(KeyEvent.VK_DELETE);
 		  Thread.sleep(2000);
-          employeeId.sendKeys(prop.getProperty("employeeId"));
+                  employeeId.sendKeys(prop.getProperty("employeeId"));
      
-          WebElement otherId=driver.findElement(By.xpath(prop.getProperty("other_id")));
-    	  Thread.sleep(2000);
+                  WebElement otherId=driver.findElement(By.xpath(prop.getProperty("other_id")));
+    	          Thread.sleep(2000);
 		  otherId.click();
 		  robot.keyPress(KeyEvent.VK_CONTROL);
 		  robot.keyPress(KeyEvent.VK_A);
@@ -137,9 +134,9 @@ public class PersonalDetailsPage extends TestBase {
 		  robot.keyPress(KeyEvent.VK_DELETE);
 		  robot.keyRelease(KeyEvent.VK_DELETE);
 		  Thread.sleep(2000);
-          driverLicenseNum.sendKeys(prop.getProperty("licenseNum"));
+                  driverLicenseNum.sendKeys(prop.getProperty("licenseNum"));
      
-   	       WebElement licenseExpiryDate =driver.findElement(By.xpath(prop.getProperty("license_expirydate")));
+   	           WebElement licenseExpiryDate =driver.findElement(By.xpath(prop.getProperty("license_expirydate")));
 		   Thread.sleep(2000);
 		   licenseExpiryDate.click();
 		   robot.keyPress(KeyEvent.VK_CONTROL);
@@ -149,10 +146,10 @@ public class PersonalDetailsPage extends TestBase {
 		   robot.keyPress(KeyEvent.VK_DELETE);
 		   robot.keyRelease(KeyEvent.VK_DELETE);
 		   Thread.sleep(2000);
-           licenseExpiryDate.sendKeys(prop.getProperty("licenseExpiryNum"));
+                   licenseExpiryDate.sendKeys(prop.getProperty("licenseExpiryNum"));
      
-           WebElement ssnNum =driver.findElement(By.xpath(prop.getProperty("ssn_num")));
-           Thread.sleep(2000);
+               WebElement ssnNum =driver.findElement(By.xpath(prop.getProperty("ssn_num")));
+               Thread.sleep(2000);
 	       ssnNum.click();
 	       robot.keyPress(KeyEvent.VK_CONTROL);
 	       robot.keyPress(KeyEvent.VK_A);
@@ -161,11 +158,11 @@ public class PersonalDetailsPage extends TestBase {
 	       robot.keyPress(KeyEvent.VK_DELETE);
 	       robot.keyRelease(KeyEvent.VK_DELETE);
 	       Thread.sleep(2000);
-           ssnNum.sendKeys(prop.getProperty(""));
+               ssnNum.sendKeys(prop.getProperty(""));
      
      
-           WebElement sinNum =driver.findElement(By.xpath(prop.getProperty("sin_num")));
-           Thread.sleep(2000);
+               WebElement sinNum =driver.findElement(By.xpath(prop.getProperty("sin_num")));
+               Thread.sleep(2000);
 	       sinNum.click();
 	       robot.keyPress(KeyEvent.VK_CONTROL);
 	       robot.keyPress(KeyEvent.VK_A);
@@ -174,7 +171,7 @@ public class PersonalDetailsPage extends TestBase {
 	       robot.keyPress(KeyEvent.VK_DELETE);
 	       robot.keyRelease(KeyEvent.VK_DELETE);
 	       Thread.sleep(2000);
-           sinNum.sendKeys(prop.getProperty("sinNum"));
+               sinNum.sendKeys(prop.getProperty("sinNum"));
      
   
   
@@ -209,8 +206,8 @@ public class PersonalDetailsPage extends TestBase {
            }
   
   
-           WebElement dateOfBirth =driver.findElement(By.xpath(prop.getProperty("date_of_birth")));
-           Thread.sleep(2000);
+               WebElement dateOfBirth =driver.findElement(By.xpath(prop.getProperty("date_of_birth")));
+               Thread.sleep(2000);
 	       dateOfBirth.click();
 	       robot.keyPress(KeyEvent.VK_CONTROL);
 	       robot.keyPress(KeyEvent.VK_A);
@@ -222,10 +219,10 @@ public class PersonalDetailsPage extends TestBase {
 	       dateOfBirth.sendKeys(prop.getProperty("date0fBirth"));
 	       Thread.sleep(1000);
 	       WebElement secondsaveButton=driver.findElement(By.xpath(prop.getProperty("second_save_button")));
-           secondsaveButton.click();
+               secondsaveButton.click();
   
           
-	       Actions act1 = new Actions(driver);
+	   Actions act1 = new Actions(driver);
            act1.scrollByAmount(0,600).perform();
            WebElement bloodTypeDropdown =driver.findElement(By.xpath(prop.getProperty("blood_type_dropdown")));
            bloodTypeDropdown.click();
@@ -242,7 +239,7 @@ public class PersonalDetailsPage extends TestBase {
   
   
            Thread.sleep(1000);
-	       WebElement thirdsaveButton =driver.findElement(By.xpath(prop.getProperty("third_save_button")));
+	   WebElement thirdsaveButton =driver.findElement(By.xpath(prop.getProperty("third_save_button")));
            thirdsaveButton.click();
   
   
@@ -262,13 +259,11 @@ public class PersonalDetailsPage extends TestBase {
            rb.keyPress(KeyEvent.VK_ENTER);
            rb.keyRelease(KeyEvent.VK_ENTER);
            
-   		} catch (InterruptedException e) {
-   			
-   			e.printStackTrace();
-   		} catch (AWTException e) {
-			
-			e.printStackTrace();
-		}
+   	} catch (InterruptedException e) {
+   	e.printStackTrace();
+   	} catch (AWTException e) {
+	e.printStackTrace();
+	}
   
      
      }
