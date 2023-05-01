@@ -1,5 +1,4 @@
 package com.orangehrm.pages;
-
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -9,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
 import com.orangehrm.base.TestBase;
 
 public class EmergencyContactsPage extends TestBase {
@@ -47,23 +45,25 @@ public class EmergencyContactsPage extends TestBase {
 		Actions actions=new Actions(driver);
 		actions.scrollByAmount(0,500);
 		Thread.sleep(1000);
-	    WebElement uploadFile2 = driver.findElement(By.xpath(prop.getProperty("E_Locator_7")));
-	    uploadFile2.click();
-	    WebElement browserclick2 = driver.findElement(By.xpath(prop.getProperty("E_Locator_8")));
-	    browserclick2.click();
-	    Robot rob = new Robot();
-	    rob.delay(2000);
-	    StringSelection sss= new StringSelection(prop.getProperty("E_Value_6"));
-	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sss,null);
-	    rob.keyPress(KeyEvent.VK_CONTROL);
-	    rob.keyPress(KeyEvent.VK_V);
-	    rob.keyRelease(KeyEvent.VK_CONTROL);
-	    rob.keyRelease(KeyEvent.VK_V);
-	    rob.keyPress(KeyEvent.VK_ENTER);
-	    rob.keyRelease(KeyEvent.VK_ENTER);
-	    Thread.sleep(1000);
-        WebElement secondsaveButton=driver.findElement(By.xpath(prop.getProperty("E_Locator_9")));
-		secondsaveButton.click();
+		
+	        WebElement uploadFile2 = driver.findElement(By.xpath(prop.getProperty("E_Locator_7")));
+	        uploadFile2.click();
+	        WebElement browserclick2 = driver.findElement(By.xpath(prop.getProperty("E_Locator_8")));
+	        browserclick2.click();
+	        Robot rob = new Robot();
+	        rob.delay(2000);
+	        StringSelection sss= new StringSelection(prop.getProperty("E_Value_6"));
+	        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sss,null);
+	        rob.keyPress(KeyEvent.VK_CONTROL);
+	        rob.keyPress(KeyEvent.VK_V);
+	        rob.keyRelease(KeyEvent.VK_CONTROL);
+	        rob.keyRelease(KeyEvent.VK_V);
+	        rob.keyPress(KeyEvent.VK_ENTER);
+	        rob.keyRelease(KeyEvent.VK_ENTER);
+	        Thread.sleep(1000);
+		 
+           WebElement secondsaveButton=driver.findElement(By.xpath(prop.getProperty("E_Locator_9")));
+	   secondsaveButton.click();
 	
         } catch (InterruptedException e) {
 		
