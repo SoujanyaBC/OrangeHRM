@@ -13,13 +13,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	public static WebDriver driver;
-	  public static Properties prop;
+	public static Properties prop;
 	
 	public TestBase() {
 	
 	 FileInputStream ip;
 	try {
-		ip = new FileInputStream("G:\\ExcelR\\SELENIUM\\OrangeHrmTest\\src\\main\\java\\com\\orangehrm\\config\\config.properties");
+	    ip = new FileInputStream("G:\\ExcelR\\SELENIUM\\OrangeHrmTest\\src\\main\\java\\com\\orangehrm\\config\\config.properties");
 	    prop = new Properties();
 	    prop.load(ip);
 	
@@ -36,7 +36,7 @@ public class TestBase {
 			ChromeOptions co = new ChromeOptions();
 			co.addArguments("--remote-allow-origins=*");
 			WebDriverManager.chromedriver().setup();
-		    driver = new ChromeDriver(co);
+		        driver = new ChromeDriver(co);
 		}
 		else if(browserName.equals("edge")) {
 			WebDriverManager.edgedriver().setup();
@@ -44,7 +44,7 @@ public class TestBase {
 	
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get(prop.getProperty("url"));
+            driver.get(prop.getProperty("url"));
   
 	    }   
       }
