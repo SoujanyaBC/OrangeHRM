@@ -11,14 +11,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class TestBase {
+        public class TestBase {
+		
 	public static WebDriver driver;
 	public static Properties prop;
 	
 	public TestBase() {
 	
 	 FileInputStream ip;
-	try {
+	    try {
 	    ip = new FileInputStream("G:\\ExcelR\\SELENIUM\\OrangeHrmTest\\src\\main\\java\\com\\orangehrm\\config\\config.properties");
 	    prop = new Properties();
 	    prop.load(ip);
@@ -26,25 +27,25 @@ public class TestBase {
 	} catch (FileNotFoundException e) {
 	e.printStackTrace();
 	} catch (IOException e) {
-		e.printStackTrace();
+	e.printStackTrace();
 	}
 	
 	}
 	public static void initialize() {
 		String browserName = prop.getProperty("browser");
 		if(browserName.equals("chrome")) {
-			ChromeOptions co = new ChromeOptions();
-			co.addArguments("--remote-allow-origins=*");
-			WebDriverManager.chromedriver().setup();
-		        driver = new ChromeDriver(co);
+		ChromeOptions co = new ChromeOptions();
+		co.addArguments("--remote-allow-origins=*");
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver(co);
 		}
 		else if(browserName.equals("edge")) {
-			WebDriverManager.edgedriver().setup();
-		     driver = new EdgeDriver();}
+	        WebDriverManager.edgedriver().setup();
+		driver = new EdgeDriver();}
 	
-	    driver.manage().window().maximize();
-	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-            driver.get(prop.getProperty("url"));
+	        driver.manage().window().maximize();
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                driver.get(prop.getProperty("url"));
   
 	    }   
       }
