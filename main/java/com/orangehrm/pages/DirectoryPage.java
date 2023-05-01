@@ -19,11 +19,11 @@ public class DirectoryPage extends TestBase {
        	 
    	 try { 
 	
-   		driver.navigate().to((prop.getProperty("D_Value_1")));
-   		WebElement employeeName=driver.findElement(By.xpath(prop.getProperty("D_Locator_1")));
-		employeeName.sendKeys();
-		WebElement jobTitleDropdown =driver.findElement(By.xpath(prop.getProperty("D_Locator_2")));
-		jobTitleDropdown.click();
+   	driver.navigate().to((prop.getProperty("D_Value_1")));
+   	WebElement employeeName=driver.findElement(By.xpath(prop.getProperty("D_Locator_1")));
+	employeeName.sendKeys();
+	WebElement jobTitleDropdown =driver.findElement(By.xpath(prop.getProperty("D_Locator_2")));
+	jobTitleDropdown.click();
         Thread.sleep(1000);
         List<WebElement>  jobtitles= driver.findElements(By.xpath(prop.getProperty("D_Locator_3")));
         System.out.println("Number of Job Titles : "+ jobtitles.size());
@@ -51,18 +51,18 @@ public class DirectoryPage extends TestBase {
 
         }
         Thread.sleep(2000);
-		WebElement searchButton=driver.findElement(By.xpath(prop.getProperty("D_Locator_6")));
-		searchButton.click();
-		Thread.sleep(2000);
-		WebElement resetButton=driver.findElement(By.xpath(prop.getProperty("D_Locator_7")));
-		resetButton.click();
-		Thread.sleep(1000);
-		WebElement userdropdownlist= driver.findElement(By.xpath(prop.getProperty("D_Locator_8")));
-		userdropdownlist.click();
-		Thread.sleep(1000);
-		WebElement logoutClick= driver.findElement(By.xpath(prop.getProperty("D_Locator_9")));
-		Actions actions =new Actions (driver);
-		actions.moveToElement(logoutClick).click().perform();
+	WebElement searchButton=driver.findElement(By.xpath(prop.getProperty("D_Locator_6")));
+	searchButton.click();
+	Thread.sleep(2000);
+	WebElement resetButton=driver.findElement(By.xpath(prop.getProperty("D_Locator_7")));
+	resetButton.click();
+	Thread.sleep(1000);
+	WebElement userdropdownlist= driver.findElement(By.xpath(prop.getProperty("D_Locator_8")));
+	userdropdownlist.click();
+	Thread.sleep(1000);
+	WebElement logoutClick= driver.findElement(By.xpath(prop.getProperty("D_Locator_9")));
+	Actions actions =new Actions (driver);
+	actions.moveToElement(logoutClick).click().perform();
 	
 	
         } catch (InterruptedException e) {
