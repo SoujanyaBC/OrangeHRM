@@ -1,15 +1,13 @@
 package com.orangehrm.pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import com.orangehrm.base.TestBase;
 
 public class LoginPage extends TestBase {
 	
 	    WebDriver driver;
 		
-		public LoginPage(WebDriver driver){
+	    public LoginPage(WebDriver driver){
 			
 	    this.driver = driver;
 	    
